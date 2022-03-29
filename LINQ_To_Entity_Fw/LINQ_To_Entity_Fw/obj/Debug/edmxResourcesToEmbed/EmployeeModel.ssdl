@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="T_System_TrainingModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'T_System_Training.dbo.artists' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="artists">
+          <Property Name="artistId" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'T_System_Training.dbo.collectors' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="collectors">
+          <Property Name="collectorid" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" />
+    <Property Name="Salary" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="ManergerId" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'T_System_Training.dbo.Manager' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Manager">
+          <Property Name="managerId" Type="int" />
+          <Property Name="managerName" Type="varchar" MaxLength="40" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'T_System_Training.dbo.sales' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="sales">
+          <Property Name="id" Type="int" />
+          <Property Name="saledate" Type="varchar" MaxLength="20" />
+          <Property Name="paintingid" Type="int" />
+          <Property Name="artistId" Type="int" />
+          <Property Name="collectorid" Type="int" />
+          <Property Name="salesprice" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>-->
+  <EntityContainer Name="T_System_TrainingModelStoreContainer">
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
